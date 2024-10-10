@@ -1,0 +1,213 @@
+<app-header></app-header>
+<div class="spacer2"></div>
+<div class="container">
+    <div class="row">
+        <span class="Interheading3">Termina tu compra</span>
+    </div>
+<div class="row">
+    <div class="col-lg-9">
+        <div class="card" style="width: 100%;border: none;">
+            <div class="card-body">
+                <i class="fa-solid fa-circle-left" style="cursor: pointer;" (click)="seguir_Comprando()"></i>
+               &nbsp; <span class="interHeading6" >Seguir comprando</span></div>
+          </div>  
+       
+    </div>
+    <div class="col-lg-3 justify-content-center">
+        <div class="card" style="width: 100%;border: none;">
+            <div class="card-body">
+                <span class="interHeading5">Resumen de compra</span></div>
+          </div>  
+    </div>
+</div>
+<div class="spacer2"></div>
+<div class="row">
+    <div class="col-lg-9">
+        <div class="card" style="width: 100%;border: none;">
+            <div class="card-body">
+            <div class="row">
+                <div class="col-lg-3">
+                    <img [src]="seleccionado.imagen" style="width: 100%;height: auto;">
+                </div>
+                <div class="col-lg-3">
+                    <span class="Interheading5">{{seleccionado.nombre}}</span>
+                    <br>
+                    <span class="capeliminar">ELIMINAR <i class="fa-regular fa-heart" style="margin-left: 20px;"></i></span>
+                </div>
+                <div class="col-lg-3 justify-content-center">
+                    <button type="button" (click)="restar()" style="    width: 25.42px;
+                    border-color: #000000;
+                    background-color: #ffff;
+                    border-radius: 5px;
+                ">-</button>
+                    <label style="width: 50px;text-align: center;">{{suma}}</label>
+                    <button type="button" (click)="sumar()" style="    width: 25.42px;
+                    border-color: #000000;
+                    background-color: #ffff;
+                    border-radius: 5px;
+                ">+</button>
+                </div>
+                <div class="col-lg-3">
+                    <span class="interHEading3">${{seleccionado.precio}} MXN</span>
+                    <br>
+                    <span class="subtitleheading">sin cargo por envio</span>
+                </div>
+            </div>
+          </div>   
+    </div>
+</div>
+<div class="col-lg-3">
+    <div class="row">
+        <div class="col-lg-6">
+            <span class="interHEading5">Subtotal</span>
+            <br>
+            <span class="interHEading5">(4)</span>
+        </div>
+        <div class="col-lg-6">
+           <span class="interHEading5">$ {{seleccionado.precio}}.00 MXN</span> 
+        </div>
+    </div>
+    <div class="spacer2"></div>
+    <div class="row">
+        <div class="col-lg-6">
+            <span class="interHEading6">Envío</span>
+        </div>
+        <div class="col-lg-6">
+           <span class="interHEading5">$ 000.00 MXN</span> 
+        </div>
+    </div>
+    <div class="spacer2"></div>
+    <div class="row">
+        <div class="col-lg-6">
+            <span class="interHEading5">TOTAL</span>
+        </div>
+        <div class="col-lg-6">
+           <span class="interHEading5">$ {{seleccionado.precio}}.00 MXN</span> 
+        </div>
+    </div>
+    <div class="spacer2"></div>
+    <div class="row justify-content-center">
+        <button type="button" (click)="pagar()" class="btn btn-dark"
+        style="width: 150.2px;
+        height: 47.12px;
+        top: 798px;
+        left: 820px;
+        gap: 0px;
+        border-radius: 8px 8px 8px 8px;
+        border: 0.3px 0px 0px 0px;
+        opacity: 0px;
+        ">Pagar</button>
+    </div>
+    <div class="spacer2"></div>
+    <div class="row">
+        <button type="button" style="width: 324px;
+        height: 56px;
+        top: 611px;
+        left: 1068px;
+        gap: 0px;
+        border-radius: 16px;
+        opacity: 0px;
+        background: rgba(216, 255, 0, 1);
+        border: none;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 17.15px;
+
+        "><img src="security.png"/> Compra 100% segura</button>
+    </div>
+
+</div>    
+</div>
+<div class="spacer2"></div>
+<div class="row">
+    <div class="col-lg-3" >
+        <div class="card" style="border: none;">
+            <div class="card-header" style="border-bottom: none;background: #ffffff;">
+                <span class="skuInter">SKU: DCATO19939</span>
+                <a href="#"><i class="fa-regular fa-heart" style="    float: inline-end;"></i></a>
+            </div>
+            <img class="card-img-top"  src="./adicional3.png" style="width: auto;height: 180px;" alt="Sin información">
+           
+            <div class="card-body">
+                <div>
+                    <span class="rating">
+                        <i class="fa-solid fa-star" style="width:16px;margin-left: 5px;"></i>
+                        <span class="ratingInter" style="margin-left: 5px">4.6</span>
+                    </span>
+                </div>
+            </div>
+            <div class="card-footer" style="border-top: none;background: #ffffff;">
+               <p class="card-text interHEadingproduct6" style="height: 100px;overflow: hidden;">Carter aceite Mazda 6 2.5, 20009 a 2010 aluminio</p>
+               <p class="card-text subaraydo">$1,842</p>
+               <p class="card-text interHeading4">$1,842</p>
+              </div>
+          </div>
+    </div>
+    <div class="col-lg-3" >
+        <div class="card" style="border: none;">
+            <div class="card-header" style="border-bottom: none;background: #ffffff;">
+                <span class="skuInter">SKU: DCATO19939</span>
+                <a href="#"><i class="fa-regular fa-heart" style="    float: inline-end;"></i></a>
+            </div>
+            <img class="card-img-top"  src="./adicional1.png" style="width: auto;height: 180px;" alt="Sin información">
+           
+            <div class="card-body">
+                <div>
+                    <span class="rating">
+                        <i class="fa-solid fa-star" style="width:16px;margin-left: 5px;"></i>
+                        <span class="ratingInter" style="margin-left: 5px">4.6</span>
+                    </span>
+                </div>
+            </div>
+            <div class="card-footer" style="border-top: none;background: #ffffff;">
+               <p class="card-text interHEadingproduct6" style="height: 100px;overflow: hidden;">Filtro Mazda 6 2.5, 20009 a 2010 aluminio</p>
+               <p class="card-text subaraydo">$1,842</p>
+               <p class="card-text interHeading4">$1,842</p>
+              </div>
+          </div>
+    </div>
+    <div class="col-lg-3" >
+        <div class="card" style="border: none;">
+            <div class="card-header" style="border-bottom: none;background: #ffffff;">
+                <span class="skuInter">SKU: DCATO19939</span>
+                <a href="#"><i class="fa-regular fa-heart" style="    float: inline-end;"></i></a>
+            </div>
+            <img class="card-img-top"  src="./adicional2.png" style="width: auto;height: 180px;" alt="Sin información">
+           
+            <div class="card-body">
+                <div>
+                    <span class="rating">
+                        <i class="fa-solid fa-star" style="width:16px;margin-left: 5px;"></i>
+                        <span class="ratingInter" style="margin-left: 5px">4.6</span>
+                    </span>
+                </div>
+            </div>
+            <div class="card-footer" style="border-top: none;background: #ffffff;">
+               <p class="card-text interHEadingproduct6" style="height: 100px;overflow: hidden;">Escape Mazda 6 2.5, 20009 a 2010 aluminio</p>
+               <p class="card-text subaraydo">$1,842</p>
+               <p class="card-text interHeading4">$1,842</p>
+              </div>
+          </div>
+    </div>
+    <div class="col-lg-3 justify-content-center" style="background: #ffffff;text-align: center;">
+        <div class="spacer2"></div>
+        <span class="interHeading4">Precio total:</span>
+        <div class="spacer2"></div>
+        <span class="interHEading3">$ 850.00 MXN</span>
+        <div class="spacer2"></div>
+        <button type="button" style="width: Hug (236px)px;
+        height: Hug (44px)px;
+        top: 313px;
+        left: 1064px;
+        background: #ffffff;
+        padding: 8px 24px 8px 24px;
+        gap: 10px;
+        border-radius: 8px;
+        border: 1px 0px 0px 0px;
+        opacity: 0px;
+        " >Agregar al carrito</button>
+    </div>
+</div>
+</div>
+<div class="spacer2"></div>
+<app-footer></app-footer>

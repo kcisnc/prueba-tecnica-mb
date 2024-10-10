@@ -1,0 +1,146 @@
+<app-header></app-header>
+<div class="spacer2"></div>
+<div class="container">
+    <div class="row">
+        <span class="Interheading3">Carrito de compra</span>
+    </div>
+<div class="row">
+    <div class="col-lg-9">
+        <div class="card" style="width: 100%;border: none;">
+            <div class="card-body">
+                <i class="fa-solid fa-circle-left" style="cursor: pointer;" (click)="seguir_Comprando()"></i>
+               </div>
+          </div>  
+       
+    </div>
+    <div class="col-lg-3 justify-content-center">
+        <div class="card" style="width: 100%;border: none;">
+            <div class="card-body">
+                <span class="interHeading5">Resumen de compra</span></div>
+          </div>  
+    </div>
+</div>
+<div class="spacer2"></div>
+<div class="row">
+    <div class="col-lg-9">
+        <div class="card" style="width: 100%;border: none;">
+            <div class="card-body">
+            <div class="row">
+                <label for="exampleFormControlInput1" class="form-label">Contaco</label>
+                 <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo electrónico">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Teléfono">
+                 </div>
+            </div>
+            <div class="row">
+                <label for="exampleFormControlInput1" class="form-label">Datos para entrega</label>
+                 <div class="col mb-3">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                </div>
+                <div class="col mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Apellido">
+                 </div>
+            </div>
+            <div class="row">
+                 <div class="col mb-3">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Calle">
+                </div>
+                <div class="col mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Número exterior">
+                 </div>
+                 <div class="col mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Número interior">
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3">
+                   <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Colonia">
+               </div>
+               <div class="col mb-3">
+                   <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Código postal">
+                </div>
+                <div class="col mb-3">
+                   <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ciudad">
+                </div>
+           </div>
+           <div class="row">
+            <div class="col-md-4 mb-3">
+                <select id="inputState" class="form-control" placeholder="Estado">
+                    <option selected>Selecciona...</option>
+                    <option>...</option>
+                  </select>
+                 </div>
+          </div>   
+    </div>
+</div>
+</div>
+<div class="col-lg-3" style="background-color: #ffffff;">
+    <div class="row">
+        <div class="col-lg-6">
+            <br>
+            <span class="interHEading5">Subtotal</span>
+            <br>
+            <span class="interHEading5">(4)</span>
+        </div>
+        <div class="col-lg-6">
+            <br>
+           <span class="interHEading5">$ {{seleccionado.precio}}.00 MXN</span> 
+        </div>
+    </div>
+    <div class="spacer2"></div>
+    <div class="row">
+        <div class="col-lg-6">
+            <span class="interHEading6">Envío</span>
+        </div>
+        <div class="col-lg-6">
+           <span class="interHEading5">$ 000.00 MXN</span> 
+        </div>
+    </div>
+    <div class="spacer2"></div>
+    <div class="row">
+        <div class="col-lg-6">
+            <span class="interHEading5">TOTAL</span>
+        </div>
+        <div class="col-lg-6">
+           <span class="interHEading5">$ {{seleccionado.precio}}.00 MXN</span> 
+        </div>
+    </div>
+    <div class="spacer2"></div>
+    <div class="row justify-content-center">
+        <button type="button" class="btn btn-dark"
+        style="width: 150.2px;
+        height: 47.12px;
+        top: 798px;
+        left: 820px;
+        gap: 0px;
+        border-radius: 8px 8px 8px 8px;
+        border: 0.3px 0px 0px 0px;
+        opacity: 0px;
+        ">Comprar</button>
+    </div>
+    <div class="spacer2"></div>
+    <div class="row">
+        <button type="button" style="width: 324px;
+        height: 56px;
+        top: 611px;
+        left: 1068px;
+        gap: 0px;
+        border-radius: 16px;
+        opacity: 0px;
+        background: rgba(216, 255, 0, 1);
+        border: none;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 17.15px;
+
+        "><img src="security.png"/> Compra 100% segura</button>
+    </div>
+
+</div>    
+</div>
+
+</div>
+<div class="spacer2"></div>
+<app-footer></app-footer>

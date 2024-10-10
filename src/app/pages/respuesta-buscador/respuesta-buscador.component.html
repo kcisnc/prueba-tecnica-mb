@@ -1,0 +1,135 @@
+<app-header></app-header>
+<div class="backgbody">
+<div class="spacer2"></div>
+<div class="container">
+    <div class="row">
+        <span class="Interheading3">{{datoBuscar}}</span>
+    </div>
+    <div class="row">
+        <span class="InterHeading5">{{count_resultados}} Resultados</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="row">
+        <span class="InterHeading6">Motor > Bujías</span>
+    </div>
+    <div class="spacer2"></div>
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card" style="width: 100%;border: none;">
+                <div class="card-body">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label heading6" for="flexSwitchCheckDefault">Llega mañana</label>
+                  </div>
+                 
+                <!--  </form> -->
+                </div>
+              </div>  
+              <div class="spacer"></div>  
+              <div class="card" style="width: 100%;border: none;">
+                <div class="card-body">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input pull-right " type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label heading6" for="flexSwitchCheckDefault">Envío gratis</label>
+                         </div>
+                <!--  </form> -->
+                </div>
+              </div> 
+              <div class="spacer"></div>
+              <div class="card" style="width: 100%;border: none;">
+                <div class="card-body">
+                  
+                     <div class="form-check form-switch">
+                        <input class="form-check-input pull-right" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label heading6" for="flexSwitchCheckDefault">Tiendas oficiales</label>
+                    </div> 
+                <!--  </form> -->
+                </div>
+              </div> 
+              <div class="spacer"></div>  
+              <div class="card" style="width: 100%;border: none;">
+                <div class="card-body">
+                    <div class="form-check form-switch">
+                        <i class="fa-solid fa-angle-down"></i>
+                        <label class="form-check-label heading6" for="flexSwitchCheckDefault">Marcas</label>
+                         </div>
+                <!--  </form> -->
+                </div>
+              </div>
+              <div class="spacer"></div>
+              <div class="card" style="width: 100%;border: none;">
+                <div class="card-body">
+                  
+                     <div class="form-check form-switch">
+                        <input class="pull-right" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label heading6" for="flexSwitchCheckDefault">Autolite</label>
+                    </div> 
+                    <div class="form-check form-switch">
+                        <input class="pull-right" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label heading6" for="flexSwitchCheckDefault">Bosch</label>
+                    </div> 
+                    <div class="form-check form-switch">
+                        <input class="pull-right" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label heading6" for="flexSwitchCheckDefault">Champion</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="pull-right" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label heading6" for="flexSwitchCheckDefault">Denso</label>
+                    </div>  
+                    <div class="form-check form-switch">
+                        <input class="pull-right" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label heading6" for="flexSwitchCheckDefault">NGK</label>
+                    </div>  
+                <!--  </form> -->
+                </div>
+              </div> 
+        </div>
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="card" style="width: 100%;border: none;">
+                    <div class="card-body">
+                      <span class="InterHeading5">Ordenar por: Menor precio <i class="fa-solid fa-angle-down"></i> </span>
+                     <div style="float: inline-end;">
+                        <img src="./Group_238335.svg" style="margin-right: 5px;"/>
+                        <img src="./space_dashboard.svg"/>
+                     </div>
+                    <!--  </form> -->
+                    </div>
+                  </div> 
+            </div>
+            <div class="spacer"></div>
+            <div class="row">
+                <div class="col-lg-3"  *ngFor="let resultado of resultados" >
+                <a (click)="add_to_cart(resultado)" style="cursor: pointer;">
+                <div class="card" style="width: 11rem;border: none;">
+                    <div class="card-header" style="border-bottom: none;background: #ffffff;">
+                        <span class="skuInter">SKU:{{resultado.sku}}</span>
+                        <a href="#"><i class="fa-regular fa-heart" style="    float: inline-end;"></i></a>
+                    </div>
+                    <img class="card-img-top" *ngIf="resultado.imagen != null"[src]="resultado.imagen" style="width: 100%;height: 140px;" [alt]="resultado.nombre">
+                    <img class="card-img-top" *ngIf="resultado.imagen == null" src="./Imagen_no_disponible.svg.png" style="width: auto;height: 140px;" alt="Sin información">
+                   
+                    <div class="card-body">
+                        <div>
+                            <span class="rating">
+                                <i class="fa-solid fa-star" style="width:16px;margin-left: 5px;"></i>
+                                <span class="ratingInter" style="margin-left: 5px">4.6</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-footer" style="border-top: none;background: #ffffff;">
+                       <p class="card-text interHEadingproduct6" style="height: 100px;overflow: hidden;">{{resultado.nombre}}</p>
+                       <p class="card-text subaraydo">$1,842</p>
+                       <p class="card-text interHeading4">${{resultado.precio}}</p>
+                      </div>
+                  </div>
+                </a>
+                <div class="spacer" style="background-color: blue;"></div>
+            </div>
+            <div class="spacer2"></div>
+           
+        </div>
+    </div>
+</div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,131 @@
+<app-header></app-header>
+<div style="background-color: #F9F9FB;">
+<div class="row">
+        <img src="frame.png" style="width:100%;margin-top: -12px;">
+    </div>
+<div class="spacer2"></div>
+<div class="container">
+<div class="row">
+    <h5 class="interFont">Categorías</h5>
+</div>
+<div class="row">
+    <div class="col-lg"  *ngFor="let categoria of slicedData(categorias)" >
+        <div class="card" style="width: 12rem;border: none;background-color: #ffffff;">
+            <img class="card-img-top" style="width:200px;height:200px;" *ngIf="categoria.imagen != null"[src]="categoria.imagen" alt="Sin información">
+            <img class="card-img-top" *ngIf="categoria.imagen == null" src="./Imagen_no_disponible.svg.png" style="width:200px;height:200px;">
+            <div class="card-body">
+              <p class="card-text interHeading5">{{categoria.nombre}}</p>
+              <p class="card-text interHeading6">Ver todo</p>
+            </div>
+          </div>
+    </div>
+</div>
+<div class="spacer2"></div>
+<div class="row">
+<div class="d-flex justify-content-end ">
+<p class="text-right interHeading4">Ver todas <i class="fa-solid fa-arrow-right" style="width: 19.12px;"></i> </p>
+</div>
+</div>
+<!-- ofertas -->
+<div class="row">
+    <h5 class="interFont">Ofertas</h5>
+</div>
+<div class="row">
+    <div class="col-lg"  *ngFor="let oferta of ofertas" >
+        <div class="card" style="width: 12rem;border: none;">
+            <div class="card-header" style="border-bottom: none;background: #ffffff;">
+                <span class="skuInter">SKU:{{oferta.sku}}</span>
+                <a href="#"><i class="fa-regular fa-heart" style="    float: inline-end;"></i></a>
+            </div>
+            <img class="card-img-top" *ngIf="oferta.imagen != null"[src]="oferta.imagen" style="width: 100%;height: 180px;" [alt]="oferta.nombre">
+            <img class="card-img-top" *ngIf="oferta.imagen == null" src="./Imagen_no_disponible.svg.png" style="width: auto;height: 180px;" alt="Sin información">
+           
+            <div class="card-body">
+                <div>
+                    <span class="rating">
+                        <i class="fa-solid fa-star" style="width:16px;margin-left: 5px;"></i>
+                        <span class="ratingInter" style="margin-left: 5px">4.6</span>
+                    </span>
+                </div>
+            </div>
+            <div class="card-footer" style="border-top: none;background: #ffffff;">
+               <p class="card-text interHEadingproduct6" style="height: 100px;overflow: hidden;">{{oferta.nombre}}</p>
+               <p class="card-text subaraydo">$1,842</p>
+               <p class="card-text interHeading4">$1,842</p>
+              </div>
+          </div>
+    </div>
+</div>
+<div class="spacer2"></div>
+<!--TIENDAS-->
+<div class="row">
+    <div class="col-lg-6">
+    <div class="d-flex justify-content-start ">
+        <h5 class="interFont">Tiendas oficiales</h5>
+    </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="d-flex justify-content-end ">
+            <p class="text-right interHeading4">Ver todas <i class="fa-solid fa-arrow-right" style="width: 19.12px;"></i> </p>
+            </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img src="./Rectangle 40471.png" style="width:200px;">
+        </div>
+        <div class="col">
+            <img src="./Rectangle 40473.png" style="width:200px;">
+        </div>
+        <div class="col">
+            <img src="./Rectangle 40472.png" style="width:200px;">
+        </div>
+        <div class="col">
+            <img src="./Rectangle 40474.png" style="width:200px;">
+        </div>
+        <div class="col">
+            <img src="./Rectangle 40475.png" style="width:200px;">
+        </div>
+    </div>
+    <div class="spacer3"></div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <img src="./Group 238138.png" style="width: 100%;">
+        </div>
+    </div>
+    <div class="spacer2"></div>
+    <div class="row">
+        <h5 class="interFont">Basados en tu última visita</h5>
+    </div>
+    <div class="row">
+        <div class="col-lg"  *ngFor="let ultima of ultimasV" >
+            <div class="card" style="width: 12rem;border: none;">
+                <div class="card-header" style="border-bottom: none;background: #ffffff;">
+                    <span class="skuInter">SKU:{{ultima.sku}}</span>
+                    <a href="#"><i class="fa-regular fa-heart" style="    float: inline-end;"></i></a>
+                </div>
+                <img class="card-img-top" *ngIf="ultima.imagen != null"[src]="ultima.imagen" style="width: 100%;height: auto;" [alt]="ultima.nombre">
+                <img class="card-img-top" *ngIf="ultima.imagen == null" src="./Imagen_no_disponible.svg.png" style="width: auto;height: auto;" alt="Sin información">
+               
+                <div class="card-body">
+                    <div>
+                        <span class="rating">
+                            <i class="fa-solid fa-star" style="width:16px;margin-left: 5px;"></i>
+                            <span class="ratingInter" style="margin-left: 5px">4.6</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="card-footer" style="border-top: none;background: #ffffff;">
+                   <p class="card-text interHEadingproduct6" style="height: 100px;overflow: hidden;">{{ultima.nombre}}</p>
+                   <p class="card-text interHeading4">$1,842</p>
+                  </div>
+              </div>
+        </div>
+    </div>
+</div>
+<div class="spacer2" style="background: #F9F9FB;"></div> 
+<app-footer ></app-footer>
+</div> 
+<!-- <div class="spacer2" style="background: #F9F9FB;"></div> -->
+

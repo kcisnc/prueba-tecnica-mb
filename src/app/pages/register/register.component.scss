@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+.redHatFont{
+font-family: "Red Hat Display";
+font-size: 25px;
+font-weight: 500;
+line-height: 33.07px;
+text-align: left;
+
+}
+.spacer {
+    margin-top: 80px; /* define margin as you see fit */
+}
+.spacer2 {
+    margin-top: 40px; /* define margin as you see fit */
+}
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+   /*  display: inline-block; */
+    }
+    /* ESTILO DEL INPUT*/
+    .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    }
+    /* ESTILO DEL BOTÓN */
+    .boton-standar-rw{
+    
+    background-color: #D8FF00;
+    color: #000000;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    line-height: 15px;
+    border: none;
+    transition: all 0.3s ease 0s;
+    width: 177px;
+    height: 47px;
+    padding: 10px;
+    }
+    /* ESTILO DEL BOTÓN CON HOVER DE MOUSE */
+    .boton-standar-rw:hover{
+      color: white;
+      background-color: #D8FF00;
+      ;
+    }
+    .size-btn{
+            height: 47px;
+        }
+    .redHatFontTitulos{
+            font-family: "Red Hat Display";
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 33.07px;
+           
+            
+            }
+    .redHatFontInput{
+                font-family: "Red Hat Display";
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 21.17px;
+            
+                
+                }
+    .redHatFontbtn{
+                    font-family: "Red Hat Display";
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 21.17px;                   
+                    
+                    }
+     .redHatFontChecks{
+                        font-family: "Red Hat Display";
+                        font-size: 15px;
+                        font-weight: 500;
+                        line-height: 19.85px;
+                        color: #888888;
+                   
+                        
+                        }
+.btnCrear{
+    width: 153px;
+height: 45px;
+top: 1051px;
+left: 628px;
+padding: 9.44px 53.11px 9.44px 53.11px;
+gap: 345.25px;
+border-radius: 18.89px;
+opacity: 0px;
+
+}
